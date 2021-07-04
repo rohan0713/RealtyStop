@@ -1,0 +1,68 @@
+{
+  "popular_projects": [
+    {
+      "id": 1,
+      "price": "Rs. 20 lacs",
+      "name": "Mahadev Apartment",
+      "place": "Uttam nagar",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "93874823725"
+    },
+    {
+    "id": 2,
+      "price": "Rs. 15-30 lacs",
+      "name": "SB residency",
+      "place": "Dwarka",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "932823725"
+    },
+    {
+        "id": 3,
+      "price": "Rs. 50 lacs",
+      "name": "Amrapalis",
+      "place": "Karol bagh",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "93874823725"
+    },
+    {
+    "id": 4,
+      "price": "Rs. 20 lacs",
+      "name": "Mahadev Apartment",
+      "place": "Uttam nagar",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "93874823725"
+    },
+    {
+    "id": 5,
+      "price": "Rs. 15-30 lacs",
+      "name": "SB residency",
+      "place": "Dwarka",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "932823725"
+    },
+    {
+    "id": 6,
+      "price": "Rs. 20 lacs",
+      "name": "Mahadev Apartment",
+      "place": "Uttam nagar",
+      "description": "Mahadev Builders and Developers provides you Luxury 2, 3 & 4 BHK Builder Floors Apartment at Mahadev Apartment in the heart Dwarka (Sector - 23).",
+      "agent": "sudir kumar",
+      "number": "93874823725"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "it's working",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "my desktop"
+  }
+}
