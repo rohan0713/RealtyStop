@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/project"
+        android:title="Projects"
+        android:icon="@drawable/collections"/>
+    <item
+        android:title="Live"
+        android:id="@+id/live"
+        android:icon="@drawable/camera"/>
+
+    <item
+        android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"/>
+
+    <item
+        android:title="Feedback"
+        android:id="@+id/review"
+        android:icon="@drawable/feedback"
+        />
+
+</menu>
