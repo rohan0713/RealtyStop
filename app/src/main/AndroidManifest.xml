@@ -14,11 +14,12 @@
         android:theme="@style/Theme.RealEstate"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activities.allProperties"></activity>
-        <activity android:name=".activities.SearchResult" />
-        <activity android:name=".popularInScreen" />
-        <activity android:name=".activities.details_screen" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".ui.activities.allProperties"></activity>
+        <activity android:name=".ui.activities.SearchResult" />
+        <activity android:name=".ui.activities.popularInScreen" />
+        <activity android:name=".ui.activities.details_screen" />
+        <activity android:name=".ui.activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

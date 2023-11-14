@@ -1,14 +1,12 @@
-package com.example.realestate.roomFiles;
+package com.example.realestate.data.local.room;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.realestate.projectData;
-import com.example.realestate.serviceData;
+import com.example.realestate.models.projectData;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.realestate.allFragments;
+package com.example.realestate.ui.fragments.allFragments;
 
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package com.example.realestate;
+package com.example.realestate.ui.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.realestate.activities.details_screen;
+import com.example.realestate.R;
+import com.example.realestate.models.projectData;
+import com.example.realestate.ui.activities.details_screen;
 
 import java.util.ArrayList;
 

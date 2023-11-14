@@ -70,17 +70,18 @@
                     android:layout_marginRight="10dp"
                     android:text="Uttam Nagar, New Delhi"
                     android:textSize="15sp" />
-
+                
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInfo"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="55dp"
                     android:layout_marginTop="5dp"
+                    app:cornerRadius="10dp"
                     android:layout_marginStart="10dp"
-                    android:backgroundTint="#FF5C29"
-                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@color/base"
                     android:layout_marginEnd="10dp"
                     android:text="Contact for more"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     />
 
             </LinearLayout>

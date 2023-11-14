@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.details_screen">
+    tools:context=".ui.activities.details_screen">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -15,7 +15,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_below="@id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -80,8 +80,7 @@
                         android:fontFamily="@font/aclonica"
                         android:text="price"
                         android:textColor="#132c33"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/property_location"
@@ -90,8 +89,7 @@
                         android:fontFamily="@font/aclonica"
                         android:text="state"
                         android:textColor="#132c33"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/address"
@@ -128,7 +126,8 @@
                         android:layout_gravity="end"
                         android:layout_margin="5dp"
                         android:text="Contact?"
-                        android:textSize="18sp"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/base"
                         android:textStyle="bold"
                         app:cornerRadius="5dp" />
 
@@ -162,7 +161,7 @@
                         android:layout_marginBottom="8dp"
                         android:text="Project Details"
                         android:textColor="#060606"
-                        android:textSize="24sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -171,8 +170,7 @@
                         android:layout_height="match_parent"
                         android:text="Rishabh Cloud 9 Towers Vaishali located in Vaishali, Ghaziabad, is a well-crafted township. It has a number of apartments available between INR 49.9 Lac - 82.0 Lac. Rishabh Cloud 9 Towers Vaishali, is a 'Residential-cum-Commercial' project located at the most prime location of Sector-1, Vaishali. This project is a mixed land use project, having 65% residential; 35% commercial space. Spread over 6.25 acres of GDA allotted and approved land, this is a freehold property."
                         android:textColor="#132c33"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -181,12 +179,12 @@
             <Button
                 android:id="@+id/enquiry"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:layout_height="70dp"
+                android:textSize="14sp"
                 android:text="Enquire Now"
                 android:layout_margin="5dp"/>
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.realestate.allFragments;
+package com.example.realestate.ui.fragments.allFragments;
 
 import android.os.Bundle;
 
@@ -13,13 +13,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.realestate.R;
-import com.example.realestate.Retrofit;
-import com.example.realestate.activeProjectAdapter;
-import com.example.realestate.projectAdapter;
-import com.example.realestate.projectData;
+import com.example.realestate.data.remote.Retrofit;
+import com.example.realestate.models.ProjectResponse;
+import com.example.realestate.ui.adapters.projectAdapter;
+import com.example.realestate.models.projectData;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import retrofit2.Call;
@@ -42,19 +40,19 @@ public class projectsFragment extends Fragment {
 
     private void getProjectList(){
 
-        Call<List<projectData>> moviesInfoCall = Retrofit.GetServices().getActiveProjects();
-        moviesInfoCall.enqueue(new Callback<List<projectData>>() {
+        Call<ProjectResponse> moviesInfoCall = Retrofit.GetServices().getActiveProjects();
+        moviesInfoCall.enqueue(new Callback<ProjectResponse>() {
 
             @Override
-            public void onResponse(Call<List<projectData>> call, Response<List<projectData>> response) {
+            public void onResponse(Call<ProjectResponse> call, Response<ProjectResponse> response) {
 
-                List<projectData> pl = response.body();
+                List<projectData> pl = response.body().getList();
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setAdapter(new projectAdapter(pl, R.layout.active_projects_item));
             }
 
             @Override
-            public void onFailure(Call<List<projectData>> call, Throwable t) {
+            public void onFailure(Call<ProjectResponse> call, Throwable t) {
                 Log.d("Error" , t.getMessage());
                 Toast.makeText(getView().getContext(), "Try to connect to Internet!", Toast.LENGTH_LONG).show();
             }

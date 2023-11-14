@@ -1,4 +1,7 @@
-package com.example.realestate;
+package com.example.realestate.data.remote;
+
+import com.example.realestate.models.ProjectResponse;
+import com.example.realestate.models.projectData;
 
 import java.util.List;
 
@@ -8,7 +11,8 @@ import retrofit2.http.GET;
 
 public class Retrofit {
 
-    private static final String base_url = "http://10.0.2.2:3000/";
+//    private static final String base_url = "http://10.0.2.2:3000/";
+    private static final String base_url = "https://projectdata.free.beeceptor.com/";
 
     public static Services Services = null;
     public static Services GetServices(){
@@ -26,10 +30,10 @@ public class Retrofit {
     }
     public interface Services{
 
-        @GET("projects")
-        Call<List<projectData>> getProjectsInfo();
+        @GET("projects/data")
+        Call<ProjectResponse> getProjectsInfo();
 
-        @GET("activeProjects")
-        Call<List<projectData>> getActiveProjects();
+        @GET("projects/data")
+        Call<ProjectResponse> getActiveProjects();
     }
 }

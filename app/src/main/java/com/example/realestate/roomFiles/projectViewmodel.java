@@ -6,9 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.realestate.projectData;
-import com.example.realestate.roomFiles.projectRepository;
-import com.example.realestate.serviceData;
+import com.example.realestate.models.projectData;
 
 import java.util.List;
 

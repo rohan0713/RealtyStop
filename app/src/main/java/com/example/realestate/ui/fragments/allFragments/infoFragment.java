@@ -1,4 +1,4 @@
-package com.example.realestate.allFragments;
+package com.example.realestate.ui.fragments.allFragments;
 
 import android.os.Bundle;
 
@@ -10,14 +10,12 @@ import android.view.ViewGroup;
 
 import com.example.realestate.R;
 
-
-public class profileFragment extends Fragment {
-
+public class infoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_info, container, false);
     }
 }

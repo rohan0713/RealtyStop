@@ -1,4 +1,4 @@
-package com.example.realestate.allFragments;
+package com.example.realestate.ui.fragments.allFragments;
 
 import android.content.Intent;
 import android.graphics.Paint;
@@ -20,15 +20,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.realestate.R;
-import com.example.realestate.Retrofit;
-import com.example.realestate.activities.SearchResult;
-import com.example.realestate.activities.allProperties;
-import com.example.realestate.projectData;
-import com.example.realestate.projectAdapter;
+import com.example.realestate.data.remote.Retrofit;
+import com.example.realestate.models.ProjectResponse;
+import com.example.realestate.ui.activities.SearchResult;
+import com.example.realestate.ui.activities.allProperties;
+import com.example.realestate.models.projectData;
+import com.example.realestate.ui.adapters.projectAdapter;
 import com.example.realestate.roomFiles.projectRepository;
 import com.example.realestate.roomFiles.projectViewmodel;
-import com.example.realestate.serviceAdapter;
-import com.example.realestate.serviceData;
+import com.example.realestate.ui.adapters.serviceAdapter;
+import com.example.realestate.models.serviceData;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.Serializable;
@@ -54,8 +55,8 @@ public class buyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_buy, container, false);
 
-        TextView viewAll = view.findViewById(R.id.viewAll);
-        viewAll.setPaintFlags(viewAll.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+//        TextView viewAll = view.findViewById(R.id.viewAll);
+//        viewAll.setPaintFlags(viewAll.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         recyclerView = view.findViewById(R.id.recyclerView);
         textField = view.findViewById(R.id.projectSearch);
         EditText tt = view.findViewById(R.id.place);
@@ -81,15 +82,14 @@ public class buyFragment extends Fragment {
             }
         });
 
-        viewAll.setOnClickListener(v -> {
-            setRecyclerView(view, false);
-        });
+//        viewAll.setOnClickListener(v -> {
+//            setRecyclerView(view, false);
+//        });
 
         RecyclerView service_recyclerview = view.findViewById(R.id.recyclerView2);
         service_recyclerview.setLayoutManager(new LinearLayoutManager(view.getContext(),
                 LinearLayoutManager.HORIZONTAL, false));
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(),
-                LinearLayoutManager.HORIZONTAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
 
         projectRepository = new projectRepository(requireActivity().getApplication());
@@ -102,8 +102,8 @@ public class buyFragment extends Fragment {
 
         ArrayList<serviceData> services = new ArrayList<>();
         services.add(new serviceData("#C9A0B6", "Bungalow", R.drawable.bungalow));
-        services.add(new serviceData("#3C8DAD", "Flats", R.drawable.apartment));
-        services.add(new serviceData("#343A40", "FarmHouse", R.drawable.farmhouse));
+        services.add(new serviceData("#E5D4FF", "Apartments", R.drawable.apartment));
+        services.add(new serviceData("#A3B763", "FarmHouse", R.drawable.farmhouse));
 
         service_recyclerview.setHasFixedSize(true);
         service_recyclerview.setAdapter(new serviceAdapter(services));
@@ -112,7 +112,7 @@ public class buyFragment extends Fragment {
 
     private void setRecyclerView(View view,Boolean flag){
 
-        projectViewmodel.getProjects().observe(getViewLifecycleOwner(), new Observer<List<com.example.realestate.projectData>>() {
+        projectViewmodel.getProjects().observe(getViewLifecycleOwner(), new Observer<List<projectData>>() {
             @Override
             public void onChanged(List<projectData> projectData) {
 
@@ -133,17 +133,19 @@ public class buyFragment extends Fragment {
 
     private void getProjectList(){
 
-        Call<List<projectData>> projectInfoCall = Retrofit.GetServices().getProjectsInfo();
-        projectInfoCall.enqueue(new Callback<List<projectData>>() {
+        Call<ProjectResponse> projectInfoCall = Retrofit.GetServices().getProjectsInfo();
+        projectInfoCall.enqueue(new Callback<ProjectResponse>() {
 
             @Override
-            public void onResponse(Call<List<projectData>> call, Response<List<projectData>> response) {
+            public void onResponse(Call<ProjectResponse> call, Response<ProjectResponse> response) {
 
-                projectRepository.insert(response.body());
+                Log.d("project", response.body().getList().toString());
+                assert response.body() != null;
+                projectRepository.insert(response.body().getList());
             }
 
             @Override
-            public void onFailure(Call<List<projectData>> call, Throwable t) {
+            public void onFailure(Call<ProjectResponse> call, Throwable t) {
                 Log.d("Error" , t.getMessage());
                 Toast.makeText(getView().getContext(), "Try to connect to Internet!", Toast.LENGTH_LONG).show();
             }

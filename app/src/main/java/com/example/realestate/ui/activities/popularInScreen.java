@@ -1,8 +1,10 @@
-package com.example.realestate;
+package com.example.realestate.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.realestate.R;
 
 public class popularInScreen extends AppCompatActivity {
 

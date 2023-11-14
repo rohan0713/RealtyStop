@@ -1,4 +1,4 @@
-package com.example.realestate.activities;
+package com.example.realestate.ui.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
