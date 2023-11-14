@@ -1,4 +1,4 @@
-package com.example.realestate.roomFiles;
+package com.example.realestate.data.local.room;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -9,9 +9,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.example.realestate.projectData;
+import com.example.realestate.models.projectData;
 
-@Database(entities = {projectData.class} , version = 4)
+@Database(entities = {projectData.class} , version = 6)
 public abstract class database extends RoomDatabase {
 
     public abstract projectDAO projectDAO();

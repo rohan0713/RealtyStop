@@ -1,4 +1,4 @@
-package com.example.realestate;
+package com.example.realestate.models;
 
 import java.io.Serializable;
 

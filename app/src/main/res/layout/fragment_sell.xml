@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".allFragments.sellFragment">
+    tools:context=".ui.fragments.allFragments.sellFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F9F3F3">
+        android:background="@color/background">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,7 +25,8 @@
                 android:fontFamily="@font/acme"
                 android:text="Sell or Rent your property"
                 android:textColor="#040404"
-                android:textSize="28sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +40,8 @@
                 android:fontFamily="@font/acme"
                 android:text="Personal Details"
                 android:textColor="#061834"
-                android:textSize="20sp"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -53,7 +55,7 @@
                 android:fontFamily="@font/acme"
                 android:text="You are : "
                 android:textColor="#0B1E3A"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -63,7 +65,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_marginLeft="6dp"
-                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3">
@@ -73,21 +74,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Owner"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/agent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Agent"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/builder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Builder"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
             </RadioGroup>
 
             <TextView
@@ -100,23 +101,9 @@
                 android:fontFamily="@font/acme"
                 android:text="Property details"
                 android:textColor="#061834"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/acme"
-                android:text="For"
-                android:textColor="#061834"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -124,9 +111,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"
                 android:orientation="horizontal"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView4">
 
                 <RadioButton
@@ -134,14 +120,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sale"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/rent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rent/Lease"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -194,7 +180,8 @@
                 android:layout_marginTop="16dp"
                 android:text="More Details:"
                 android:textColor="#060606"
-                android:textSize="24sp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
@@ -264,10 +251,11 @@
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="16dp"
+                android:backgroundTint="@color/base"
                 android:text="Login and post your property"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />

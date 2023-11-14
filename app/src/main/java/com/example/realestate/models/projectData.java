@@ -1,16 +1,18 @@
-package com.example.realestate;
+package com.example.realestate.models;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 @Entity(tableName = "projects")
 public class projectData implements Serializable {
 
-    @PrimaryKey(autoGenerate = true)
-    public int projectID;
     public String price;
+    @PrimaryKey
+    @NonNull
     public String name;
     public String place;
     public String description;
@@ -20,18 +22,11 @@ public class projectData implements Serializable {
     public String image;
     public String type;
 
-    public projectData(int projectID,
-                       String price,
-                       String name,
-                       String place,
-                       String description,
-                       String agent,
-                       String number,
-                       String address,
-                       String image,
-                       String type){
+//    @PrimaryKey(autoGenerate = true)
+//    public long uuid = Long.parseLong(UUID.randomUUID().toString());
 
-        this.projectID = projectID;
+    public projectData(String price, String name, String place, String description,
+                       String agent, String number, String address, String image, String type) {
         this.price = price;
         this.name = name;
         this.place = place;

@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.realestate.allFragments.buyFragment;
-import com.example.realestate.allFragments.monitorFragment;
-import com.example.realestate.allFragments.sellFragment;
+import com.example.realestate.ui.fragments.allFragments.buyFragment;
+import com.example.realestate.ui.fragments.allFragments.monitorFragment;
+import com.example.realestate.ui.fragments.allFragments.sellFragment;
 
 public class pageAdapter extends FragmentPagerAdapter {
 

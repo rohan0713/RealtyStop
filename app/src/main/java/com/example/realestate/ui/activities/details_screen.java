@@ -1,4 +1,4 @@
-package com.example.realestate.activities;
+package com.example.realestate.ui.activities;
 
 import android.content.Intent;
 import android.net.Uri;

@@ -1,4 +1,4 @@
-package com.example.realestate;
+package com.example.realestate.ui.adapters;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.realestate.R;
+import com.example.realestate.models.projectData;
+import com.example.realestate.models.serviceData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +32,7 @@ public class serviceAdapter extends RecyclerView.Adapter<serviceAdapter.serviceV
     @Override
     public void onBindViewHolder(@NonNull serviceViewHolder holder, int position) {
 
-        holder.Bind(services.get(position), this.list);
+        holder.Bind(services.get(position));
     }
 
     @Override
@@ -47,7 +51,7 @@ public class serviceAdapter extends RecyclerView.Adapter<serviceAdapter.serviceV
             super(itemView);
         }
 
-        public void Bind(serviceData service, List<projectData> list){
+        public void Bind(serviceData service){
 
             TextView service_name = itemView.findViewById(R.id.service_name);
             service_name.setText(service.name);

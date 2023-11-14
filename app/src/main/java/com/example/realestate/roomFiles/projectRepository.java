@@ -5,10 +5,9 @@ import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import com.example.realestate.projectData;
-import com.example.realestate.roomFiles.database;
-import com.example.realestate.roomFiles.projectDAO;
-import com.example.realestate.serviceData;
+import com.example.realestate.models.projectData;
+import com.example.realestate.data.local.room.database;
+import com.example.realestate.data.local.room.projectDAO;
 
 import java.util.List;
 

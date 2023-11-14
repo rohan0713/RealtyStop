@@ -1,4 +1,4 @@
-package com.example.realestate;
+package com.example.realestate.ui.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.realestate.activities.details_screen;
+import com.example.realestate.R;
+import com.example.realestate.models.projectData;
+import com.example.realestate.ui.activities.details_screen;
+import com.google.android.material.button.MaterialButton;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -66,7 +69,9 @@ public class projectAdapter extends RecyclerView.Adapter<projectAdapter.projectV
             ImageView property_image = itemView.findViewById(R.id.buildingIMage);
             Picasso.get().load(property.image).placeholder(R.drawable.loading).fit().into(property_image);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+            MaterialButton btn = itemView.findViewById(R.id.btnInfo);
+
+            btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
