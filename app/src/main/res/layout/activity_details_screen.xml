@@ -98,15 +98,15 @@
                         android:text="address"
                         android:textColor="#132c33"
                         android:layout_marginTop="10dp"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/adult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
-                        android:text="OWNER"
+                        android:text="Owner"
+                        android:textColor="#132c33"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -116,20 +116,19 @@
                         android:layout_height="wrap_content"
                         android:text="Sandeep"
                         android:textColor="#132c33"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textSize="18sp" />
 
-                    <Button
-                        android:id="@+id/vote_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="end"
-                        android:layout_margin="5dp"
-                        android:text="Contact?"
-                        android:textSize="12sp"
-                        android:backgroundTint="@color/base"
-                        android:textStyle="bold"
-                        app:cornerRadius="5dp" />
+<!--                    <Button-->
+<!--                        android:id="@+id/vote_count"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_gravity="end"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:text="Contact?"-->
+<!--                        android:textSize="12sp"-->
+<!--                        android:backgroundTint="@color/base"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:cornerRadius="5dp" />-->
 
 
                 </LinearLayout>
@@ -181,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:textSize="14sp"
+                android:backgroundTint="@color/base"
                 android:text="Enquire Now"
                 android:layout_margin="5dp"/>
         </LinearLayout>

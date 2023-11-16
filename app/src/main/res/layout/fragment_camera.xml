@@ -15,7 +15,8 @@
         android:fontFamily="@font/acme"
         android:text="Get the Live footage of your project"
         android:textColor="#060606"
-        android:textSize="24sp" />
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCamera"

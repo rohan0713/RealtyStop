@@ -8,7 +8,7 @@
     android:background="#C9A0B6"
     app:cardCornerRadius="8dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -16,26 +16,32 @@
         <ImageView
             android:id="@+id/buildingIMage"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/amprapali"/>
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
+            android:layout_below="@id/buildingIMage"
             android:text="1 BHK Flat"
             android:textColor="#040404"
-            android:textSize="20sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/price"
+            android:layout_below="@id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:text="Rs. 14lacs onwards"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/state"
@@ -45,24 +51,29 @@
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
+            android:layout_below="@id/price"
             android:layout_marginBottom="10dp"
             android:text="Uttam Nagar, New Delhi"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnInfo"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
             app:cornerRadius="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/buildingIMage"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="5dp"
             android:backgroundTint="@color/base"
             android:layout_marginEnd="10dp"
-            android:text="Contact for more"
+            android:text="Check Progress"
             android:textSize="11sp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>
