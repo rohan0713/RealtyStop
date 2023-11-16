@@ -17,30 +17,46 @@
         android:fontFamily="@font/acme"
         android:text="Personal Information"
         android:textColor="#040404"
-        android:textSize="34sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="16dp"
+        android:background="#DFDEDE"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/acme"
         android:text="General"
         android:textColor="#040404"
-        android:textSize="30sp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/border" />
 
     <LinearLayout
         android:id="@+id/first"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@drawable/borders"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/textView8">
 
@@ -53,7 +69,8 @@
             android:fontFamily="@font/acme"
             android:text="Name"
             android:textColor="#070707"
-            android:textSize="24sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/username"
@@ -64,7 +81,19 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/acme"
             android:text="Rohan Ramola"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/border2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="#DFDEDE" />
 
     </LinearLayout>
 
@@ -72,7 +101,6 @@
         android:id="@+id/second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/borders"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/first">
 
@@ -85,7 +113,9 @@
             android:fontFamily="@font/acme"
             android:text="Contact Info"
             android:textColor="#070707"
-            android:textSize="24sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/contact"
@@ -98,14 +128,26 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/acme"
             android:text="Manage your phone numbers and emails"
-            android:textSize="24sp" />
+            android:textSize="15sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/border3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="#DFDEDE" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/borders"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/second">
 
@@ -117,8 +159,9 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/acme"
             android:text="Manage your account"
+            android:textStyle="bold"
             android:textColor="#070707"
-            android:textSize="24sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/account"
@@ -129,7 +172,19 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/acme"
             android:text="Manage projects and deactivation settings"
-            android:textSize="24sp" />
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/border4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="#DFDEDE" />
 
     </LinearLayout>
 

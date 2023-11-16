@@ -22,8 +22,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-
     TabLayout tabLayout;
     TabItem buy,sell,monitor;
     ViewPager viewPager;

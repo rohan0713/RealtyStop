@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="10dp"
-                    android:backgroundTint="#FF5C29"
+                    android:backgroundTint="@color/base"
                     android:layout_marginLeft="10dp"
                     android:layout_marginEnd="10dp"
                     android:text="Contact for more"
