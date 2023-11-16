@@ -16,7 +16,7 @@ RealtyStop is a comprehensive real estate application that empowers users to exp
 4. **Construction Monitoring:**
    - Keep track of your recently purchased projects that are currently under construction.
 
-##Screenshots
+## Screenshots
 
 ||||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
