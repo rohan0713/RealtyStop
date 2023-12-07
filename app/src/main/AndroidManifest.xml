@@ -15,6 +15,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".ui.activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.FirstActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -27,8 +33,8 @@
         <activity android:name=".ui.activities.SearchResult" />
         <activity android:name=".ui.activities.popularInScreen" />
         <activity android:name=".ui.activities.details_screen" />
-        <activity
-            android:name=".ui.activities.MainActivity" />
+        <activity android:name=".ui.activities.MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
