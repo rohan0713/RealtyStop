@@ -11,35 +11,37 @@ import android.widget.TextView;
 import com.example.realestate.R;
 import com.google.android.material.button.MaterialButton;
 
-public class FirstActivity extends AppCompatActivity {
-
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_main2);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.base));
             getWindow().setNavigationBarColor(getResources().getColor(R.color.base));
         }
 
-        MaterialButton signIn = findViewById(R.id.btnSignIn);
-        signIn.setOnClickListener(new View.OnClickListener() {
+        MaterialButton signUp = findViewById(R.id.btnSignUp);
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(FirstActivity.this, SignInActivity.class);
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
-        TextView Signup = findViewById(R.id.tvSignUp);
-        Signup.setOnClickListener(new View.OnClickListener() {
+        TextView signIn = findViewById(R.id.tvSignIn);
+        signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(FirstActivity.this, SignUpActivity.class);
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
                 startActivity(i);
+                finish();
             }
         });
+
     }
 }

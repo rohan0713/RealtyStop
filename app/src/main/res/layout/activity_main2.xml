@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/base"
-    tools:context=".ui.activities.SignInActivity">
+    tools:context=".ui.activities.SignUpActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:text="Sign in to your account"
+                android:text="Create your account"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -76,23 +76,11 @@
 
                 />
 
-            <TextView
-                android:id="@+id/tvForgot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/etPassword"
-                android:text="Forgot Password?"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:gravity="center"
-                />
-
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSignIn"
+                android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_below="@id/tvForgot"
+                android:layout_below="@id/etPassword"
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
@@ -112,8 +100,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnSignIn">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/tvText2"
@@ -122,18 +109,18 @@
                     android:gravity="center"
                     android:layout_marginEnd="10dp"
                     android:textSize="16sp"
-                    android:text="Don't have an account?"
+                    android:text="Already have an account?"
                     android:textColor="@color/black"
                     android:layout_marginRight="10dp" />
 
                 <TextView
-                    android:id="@+id/tvSignUp"
+                    android:id="@+id/tvSignIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toEndOf="@id/tvText2"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:text="Sign Up"
+                    android:text="Sign In"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_toRightOf="@id/tvText2" />
